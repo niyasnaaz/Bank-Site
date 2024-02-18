@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Site</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+            overflow: hidden;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+
+        li {
+            margin-left: 20px;
+        }
+
+        a{
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.15em;
+            padding: 15px 20px;
+            position: relative;
+        }
+        p{
+            text-transform: uppercase; 
+            letter-spacing: 0.15em; 
+        }
+
+        a:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background:crimson;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+
+        a:hover:after {
+            width: 100%;
+            left: 0;
+        }
+        .underline-text {
+        text-align: center;
+        margin-left: 450px;
+        width: 420px;
+        color: #fff;
+        font-size: 35px;
+        border-bottom: 5px solid crimson;
+        padding-bottom: 5px;
+    }
+    footer {
+            width: 100%;
+            height: 100px;
+            background-color: crimson;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            margin-top: 820px;
+        }
+        p{
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            footer {
+                padding: 10px;
+            }
+        }
+</style>
+<body>
+    <section>
+        <video autoplay muted loop style="position: absolute; width: 100%;">
+            <source src="./img/finish.mp4">
+        </video>
+
+        <nav class="navbar navbar-expand-lg" style="background-color: transparent;">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light fs-3" href="#">
+                    <img src="https://th.bing.com/th/id/R.37ba32d7b3e19674d360bc14aec478d5?rik=vTyUv83VD606dA&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f5%2fBank-PNG-Pic.png&ehk=UmyQNOcFFTlp1XR9Fmps7TdQD5fplbcaHFgveUF%2brqA%3d&risl=&pid=ImgRaw&r=0"
+                        width="60px" alt="">
+                    My Bank
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-light fs-4" href="#" onclick="register()">
+                                <i class="fa-solid fa-circle-user fs-2 text-light"></i> Register
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="loginButton" class="btn btn-danger fs-4 fw-bold" onclick="log()">
+                                <i class="fa-solid fa-user text-light"></i> Login
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <div class="" style="position: absolute;">
+        <div class="row">
+            <div class="col" style="width: 1300px; margin-left: 300px;">
+                <p class="underline-text mt-5">Online Banking</p>
+                <p style="text-align: center;align-items: center; justify-content: center; padding: 10px; font-weight: 400; font-size: 30px; color: white; margin-top: 50px;">Online banking, also known as internet banking, virtual
+                    banking, web banking or home banking, is a
+                    system that enables customers of a bank or other financial institution to conduct a range of
+                    financial transactions through the financial institution's website or mobile app. Since the early
+                    2000s this has become the most common way that customers access their bank accounts.</p>
+                <button type="submit" class="btn btn-success fw-bold fs-3 mt-5" style="letter-spacing: 1.3px; text-transform: uppercase;margin-left: 500px; width: 300px; height: 60px;border-radius: 10px;">Get Started</button>
+            </div>
+       </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 My Bank. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+    </section>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
